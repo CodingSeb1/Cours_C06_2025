@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Méthode de résolution [C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter]</title>
+		<meta charset="UTF-8" ></meta>
+		<meta name="generator" content="SCENARI 6.3.11 / OpaleExtEmeraude 24.1.0" ></meta>
+		<meta name="revision" content="2025-02-13 02:42" ></meta>
+		<link rel="start" href="module_Cours_C06.html" title="C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter" ></link>
+		<meta name="author" content="S. Lemasle
+" ></meta>
+		<meta name="keywords" content="" ></meta>
+		<meta name="date" content="2025" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css" ></link>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_tePlayer/tePlayer.css" ></link>
+		<script>/*<![CDATA[*/
+/*0*/ var scServices = {id:"m72qimpg"};
+/*1*/ window.scLoadParams = {destUri:"/co/module_Cours_C06_8.html", pathToRoot:"../"};
+/*]]>*/</script>
+		<script src="../lib-sc/scCoLib.js" ></script>
+		<script src="../lib-sc/scSiLib.js" ></script>
+		<script src="../lib-sc/scTiLib.js" ></script>
+		<script src="../lib-sc/scPaLib.js" ></script>
+		<script src="../lib-md/s_assmnt.js" ></script>
+		<script src="../lib-sc/scMapMgr.js" ></script>
+		<script src="../lib-sc/scDynUiMgr.js" ></script>
+		<script src="../lib-sc/scTooltipMgr.js" ></script>
+		<script src="../lib-sc/scDragMgr.js" ></script>
+		<script src="../lib-sc/scAssmntMgr.js" ></script>
+		<script src="../lib-md/w_teMgr/teLoader.js" ></script>
+		<script src="../lib-md/w_tplMgr/tplMgr.js" ></script>
+		<script src="../lib-md/s_scSearch/jsSearch.js" ></script>
+		<script src="../lib-md/w_mathjax/mathjaxMgr.js" ></script>
+		<script src="../lib-md/w_tePlayer/tePlayer.js" ></script>
+		<script src="../lib-md/w_scCodeMgr/scCodeMgr.js" ></script>
+		<script src="../lib-md/w_searchMgr/searchMgr.js" ></script>
+		<script src="../lib-md/w_scImageMgr/scImageMgr.js" ></script>
+		<script src="../lib-md/w_outMgr/outMgr.js" ></script>
+		<script>/*<![CDATA[*/
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImageMgr.registerAdaptedImage("ide:content/des:figure.resInFlow/des:img");
+
+scImageMgr.registerGallery("des:div.galFra");
+
+scImageMgr.registerSequence("des:div.seqFra");
+
+scImageMgr.registerSvg("des:svg");
+scImageMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImageMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+tePlayerMgr.init();
+/*]]>*/</script>
+		<link rel="shortcut icon" type="image/png" href="../skin/img/favicon.png" ></link>
+		<meta name="robots" content="index,follow" ></meta>
+		<style ></style>
+		<link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print" ></link>
+		<script>/*<![CDATA[*/
+outMgr.declareOutline("outline.txt");
+	/*]]>*/</script>
+</head>
+	<body class="default module expUc">
+		<div id="root"><header id="header"><h1><span>C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden" ></hr><section class="hBk article expUc"><h2 class="hBk_ti"><span>Méthode de résolution</span></h2><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>La principale difficulté d'un problème de statique réside dans le choix du (ou des) système(s) à isoler et de l'équation à écrire, ce que l'on peut appeler <strong class="txt_emp_is ">la stratégie d'isolement.</strong></p><p>Les problèmes de statique peuvent avoir deux finalités différentes :</p><ul class="txt_il "><li class="txt_ili "><p>déterminer la loi entrée sortie statique, c'est-à-dire exprimer les AM de sortie en fonction des AM d'entrée ou <i class="txt_spec_is ">vice versa</i> (pour vérifier l'adéquation d'un actionneur avec un cahier des charges par exemple) ;</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>déterminer des AM transmissibles par l'intermédiaire des liaisons, souvent appelées inconnues de liaisons (pour valider un choix de composants réalisant une liaison par exemple).</p></li></ul></div><div class="rBk "><p>Une méthode brutale consisterait à isoler chaque solide successivement (sauf le bâti !), à dresser le bilan des actions mécaniques extérieures et à appliquer le PFS à chaque solide isolé . Pour un mécanisme composé de n solides, on obtiendrait ainsi <span class="txt_mathtex_tl "><span>\(6(n-1)\)</span></span> équations : 3 équations provenant du TRS et 3 du TMS pour les <span class="txt_mathtex_tl "><span>\(n-1\)</span></span> isolements. Leur résolution permettrait certes de répondre au problème posé, mais elle conduirait surtout à des calculs longs et fastidieux, donnant entre autre les efforts dans toutes les liaisons, ce qui n'est généralement pas demandé. Ainsi, cette méthode brutale conduit souvent à une perte de temps et est donc peu adaptée aux exigences d'efficacité imposées aux concours.</p></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/BLANC_1cm.PNG" width="78" height="59" alt="" ></img></div></figure></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk "><p><strong class="txt_emp_is ">Méthode "intelligente et efficace" :</strong></p><ol class="txt_ol "><li class="txt_oli "><p>Dresser un bilan des actions mécaniques données et des actions mécaniques recherchées. Pour cela, utiliser le graphe de structure que vous devez compléter avec les A.M données et recherchées (le tracer rapidement au brouillon s'il n'est pas demandé).</p><p>Représenter également les forces et éventuellement les moments donnés sur le dessin du mécanisme, sur son schéma cinématique ou encore mieux, sur son schéma d'architecture.</p></li><li class="txt_oli "><p>Déterminer un isolement "coupant" la liaison aux inconnues recherchées et coupant le moins de liaisons non recherchée possible pour éviter les inconnues. <strong class="txt_emp_is ">Ne jamais isoler le bâti</strong>.</p></li><li class="txt_oli "><p>Effectuer le bilan des actions mécaniques extérieures au système matériel isolé.</p></li><li class="txt_oli "><p>Énoncer et appliquer le Principe Fondamental de la Statique, ou l'un des théorème qui en découle : T.R.S ou T.M.S en <strong class="txt_emp_is ">un point judicieusement choisi</strong>.</p></li><li class="txt_oli "><p>Choisir une base de projection et écrire le système d'équation issu de l'application du PFS ou de l'un des théorèmes qui en découle.</p></li><li class="txt_oli "><p>Résoudre le système d'équations. Si la résolution n'est pas possible ou qu'elle ne permet pas d'atteindre l'objectif fixé (il reste des inconnues dans les équations), il faut proposer un nouvel isolement, en s'appuyant sur le graphe de structure et donc reprendre la méthode à l'étape n°2.</p></li></ol></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/BLANC_1cm.PNG" width="78" height="59" alt="" ></img></div></figure></div></div></div><div class="remark pBk noTitle"><h3 class="pBk_ti"><span><i class="type"><span class="label">Remarque</span></i><span class="hidden"> : </span><span class="title" ></span></span></h3><div class="pBk_co"><div class="rBk "><ul class="txt_il "><li class="txt_ili "><p>Encore une fois, <strong class="txt_emp_is ">ne jamais isoler le bâti</strong>. Pourquoi ?→ Impossible de faire le bilan des AM extérieures.</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>L'écriture des torseurs est lourde et longue à manipuler. Bien qu'utile en phase de formation et d'entraînement pour avoir une vision globale du problème, elle sera à éviter au concours, en particulier les torseurs colonnes.</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>Lire attentivement la question posée. Il est inutile de calculer 12 inconnues de liaisons si on ne vous en demande que 4 ! Ce qui veut aussi dire que l'écriture systématique des 6 équations est à éviter. On attend de vous une résolution des problèmes de statique intelligente et adaptée au cas étudié.</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>Ce n'est pas nécessairement une équation de résultante qui permet de trouver un effort.</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>Pour l'application du TMS, il convient de choisir judicieusement le point d'application. Souvent, il s'agira de choisir un point où s'exerce un effort qui n'est pas recherché. En effet, si un glisseur s'exerce au point d'application du TMS, son moment est nul, et l'équation obtenue ne fait pas apparaître d'inconnue supplémentaire.</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>Lorsqu'on a le choix, il convient d'appliquer le TMS en un point qui permet d'éviter de déplacer un torseur contenant beaucoup d'inconnues afin de minimiser les calculs et donc les risques d'erreur.</p></li></ul></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/BLANC_1cm_1.PNG" width="46" height="35" alt="" ></img></div></figure></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden" ></hr><nav class="pageTurner" role="navigation"><ul><li class="pagePrev"><a rel="prev" target="_self" href="module_Cours_C06_7.html" class="btnNav prev" title="Précédent (Cas particulier des problèmes plans)"><span>Précédent</span></a></li><li class="pageNext"><a rel="next" target="_self" href="module_Cours_C06_9.html" class="btnNav next" title="Suivant (Faisabilité d&apos;un problème de Statique : Hyperstatisme et Isostatisme.)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav aria-label="menu principal" class="pageSelector" id="menu" role="navigation" tabindex="-1"><hr class="hidden" ></hr><ul class="mnu static" data-totalPages="9"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="module_Cours_C06_1.html"><a href="module_Cours_C06_1.html" target="_self" class="item"><span>Objectifs</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_2.html"><a href="module_Cours_C06_2.html" target="_self" class="item"><span>Isolement d'un système matériel</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_3.html"><a href="module_Cours_C06_3.html" target="_self" class="item"><span>Bilan des actions mécaniques extérieures</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_4.html"><a href="module_Cours_C06_4.html" target="_self" class="item"><span>Notion d'équilibre</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_5.html"><a href="module_Cours_C06_5.html" target="_self" class="item"><span>Principe fondamental de la Statique</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_6.html"><a href="module_Cours_C06_6.html" target="_self" class="item"><span>Théorème des actions réciproques (ou mutuelles)</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_7.html"><a href="module_Cours_C06_7.html" target="_self" class="item"><span>Cas particulier des problèmes plans</span></a></div></li><li class="sel_yes anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_8.html"><span class="item"><span>Méthode de résolution</span></span></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_9.html"><a href="module_Cours_C06_9.html" target="_self" class="item"><span>Faisabilité d'un problème de Statique : Hyperstatisme et Isostatisme.</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden" ></hr><nav class="headingSelector" role="navigation"><ul class="mnu tools"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="module_Cours_C06.html" target="_self" class="item" type="index" title="Page d&apos;accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="parent"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" tabindex="-1"><hr class="hidden" ></hr><a id="linkSp" target="_blank" href="https://doc.scenari.software/Opale" title="Réalisé avec SCENARI (nouvelle fenêtre)"><span><img alt="Réalisé avec Scenari (nouvelle fenêtre)" src="../skin/img/tpl/scBtn.png" ></img></span></a></footer></div>
+		<script src="../skin/js/skin.js" ></script>
+		<script>/*<![CDATA[*/
+/* 5 */ outMgr.init();
+/* 5 */ scCodeMgr.init();
+/* 5 */ scImageMgr.init();
+/* 0 */ tplMgr.init({accessBar:"none",themeMode:"none",addMenuBtn:false});
+/*]]>*/</script>
+		<script>/*<![CDATA[*/mathjaxMgr.init();/*]]>*/</script></body></html>

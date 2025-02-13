@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Bilan des actions mécaniques extérieures [C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter]</title>
+		<meta charset="UTF-8" ></meta>
+		<meta name="generator" content="SCENARI 6.3.11 / OpaleExtEmeraude 24.1.0" ></meta>
+		<meta name="revision" content="2025-02-13 02:42" ></meta>
+		<link rel="start" href="module_Cours_C06.html" title="C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter" ></link>
+		<meta name="author" content="S. Lemasle
+" ></meta>
+		<meta name="keywords" content="" ></meta>
+		<meta name="date" content="2025" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css" ></link>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_tePlayer/tePlayer.css" ></link>
+		<script>/*<![CDATA[*/
+/*0*/ var scServices = {id:"m72qimpg"};
+/*1*/ window.scLoadParams = {destUri:"/co/module_Cours_C06_3.html", pathToRoot:"../"};
+/*]]>*/</script>
+		<script src="../lib-sc/scCoLib.js" ></script>
+		<script src="../lib-sc/scSiLib.js" ></script>
+		<script src="../lib-sc/scTiLib.js" ></script>
+		<script src="../lib-sc/scPaLib.js" ></script>
+		<script src="../lib-md/s_assmnt.js" ></script>
+		<script src="../lib-sc/scMapMgr.js" ></script>
+		<script src="../lib-sc/scDynUiMgr.js" ></script>
+		<script src="../lib-sc/scTooltipMgr.js" ></script>
+		<script src="../lib-sc/scDragMgr.js" ></script>
+		<script src="../lib-sc/scAssmntMgr.js" ></script>
+		<script src="../lib-md/w_teMgr/teLoader.js" ></script>
+		<script src="../lib-md/w_tplMgr/tplMgr.js" ></script>
+		<script src="../lib-md/s_scSearch/jsSearch.js" ></script>
+		<script src="../lib-md/w_mathjax/mathjaxMgr.js" ></script>
+		<script src="../lib-md/w_tePlayer/tePlayer.js" ></script>
+		<script src="../lib-md/w_scCodeMgr/scCodeMgr.js" ></script>
+		<script src="../lib-md/w_searchMgr/searchMgr.js" ></script>
+		<script src="../lib-md/w_scImageMgr/scImageMgr.js" ></script>
+		<script src="../lib-md/w_outMgr/outMgr.js" ></script>
+		<script>/*<![CDATA[*/
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImageMgr.registerAdaptedImage("ide:content/des:figure.resInFlow/des:img");
+
+scImageMgr.registerGallery("des:div.galFra");
+
+scImageMgr.registerSequence("des:div.seqFra");
+
+scImageMgr.registerSvg("des:svg");
+scImageMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImageMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+tePlayerMgr.init();
+/*]]>*/</script>
+		<link rel="shortcut icon" type="image/png" href="../skin/img/favicon.png" ></link>
+		<meta name="robots" content="index,follow" ></meta>
+		<style ></style>
+		<link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print" ></link>
+		<script>/*<![CDATA[*/
+outMgr.declareOutline("outline.txt");
+	/*]]>*/</script>
+</head>
+	<body class="default module expUc">
+		<div id="root"><header id="header"><h1><span>C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden" ></hr><section class="hBk article expUc"><h2 class="hBk_ti"><span>Bilan des actions mécaniques extérieures</span></h2><div class="hBk_co "><div class="basic pBk"><h3 class="pBk_ti"><span><i class="type"><span class="label">Fondamental</span></i><span class="hidden"> : </span><span class="title">Bilan des actions mécaniques extérieures</span></span></h3><div class="pBk_co"><div class="rBk "><p>Faire le <strong class="txt_emp_is ">B</strong>ilan des <strong class="txt_emp_is ">A</strong>ctions <strong class="txt_emp_is ">M</strong>écaniques <strong class="txt_emp_is ">E</strong>xtérieures (B.A.M.E.) d'un système isolé <span class="txt_mathtex_tl "><span>\(S\)</span></span> c'est recenser l'ensemble des A.M. <strong class="txt_emp_is ">extérieures</strong> c'est à dire celles exercées par <span class="txt_mathtex_tl "><span>\(\overline S\)</span></span> sur <span class="txt_mathtex_tl "><span>\(S\)</span></span>.</p></div></div></div><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>En pratique, on s'aide d'un graphe de structure du mécanisme étudié sur lequel on indique la frontière d'isolement et les actions mécaniques non transmises par les liaisons (poids, ressort, visqueuse, magnétique, aérodynamique). On parle de graphe de structure « amélioré ».</p><p>Chaque action mécanique se modélise par un torseur, et en additionnant tous ces torseurs, on définit alors le torseur des actions mécaniques extérieures à <span class="txt_mathtex_tl "><span>\(S\)</span></span> :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[\boxed{\quad 
+\{ \mathcal T_{\overline S  \rightarrow S} \}
+=
+{\vphantom{\left\{\begin{array}{ccc}
+\overrightarrow{R_{2\rightarrow 1}} \\ 
+\overrightarrow{M_{A} (2\rightarrow 1)}
+\end{array}\right\}}}
+_{P} 
+\left \{ \begin{array}{c} 
+\overrightarrow{R}_{\overline S  \rightarrow S } \\ 
+\overrightarrow{M}_{P,\,  \overline S  \rightarrow S }
+\end{array} \right \} 
+\quad}\]</span></div></figure></div></div></div><div class="example pBk"><h3 class="pBk_ti"><span><i class="type"><span class="label">Exemple</span></i><span class="hidden"> : </span><span class="title">Bride hydraulique</span></span></h3><div class="pBk_co"><div class="rBk "><p>On cherche l'effort que doit exercer le piston 2 sur la bride 1 pour obtenir un effort de serrage <span class="txt_mathtex_tl "><span>\(F_{mini}\)</span></span> sur la pièce à serrer 3. On suppose pour cela que les contacts se font sans frottement.</p></div><div class="rBk "><ul class="txt_il "><li class="txt_ili "><p><strong class="txt_emp_is ">Isolement du système matériel S={bride 1} :</strong></p></li></ul></div><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><a href="../res/BAME_Bride2_ELEVE.PNG" class="imgZoom" target="_blank" onclick="scImageMgr.loading(); return false;" title="Cliquez pour agrandir (nouvelle fenêtre)"><img src="../res/BAME_Bride2_ELEVE_1.PNG" width="630" height="177" alt="" ></img></a></div></figure></div><div class="rBk "><ul class="txt_il "><li class="txt_ili "><p><strong class="txt_emp_is ">Bilan des actions mécaniques extérieures :</strong></p><ul class="txt_il "><li class="txt_ili "><p>action de la pesanteur→ 1 : négligée dans cette étude devant les autres actions mécaniques.</p></li><li class="txt_ili "><p>action mécanique du piston 2→ 1 (transmise par la liaison sphère-plan <span class="txt_mathtex_tl "><span>\(L_{21}\)</span></span> de centre A et de normale <span class="txt_mathtex_tl "><span>\(\vec x\)</span></span>)</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>action mécanique de la pièce à serrer 3 → 1 (transmise par la liaison sphère-plan <span class="txt_mathtex_tl "><span>\(L_{31}\)</span></span> de centre B et de normale <span class="txt_mathtex_tl "><span>\(\vec y\)</span></span> )</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>action mécanique du poussoir 4 → 1 (transmise par la liaison sphère-plan <span class="txt_mathtex_tl "><span>\(L_{41}\)</span></span> de centre E et de normale <span class="txt_mathtex_tl "><span>\(\vec u\)</span></span> )</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>action mécanique du bâti 0 → 1 en O (transmise par la liaison pivot <span class="txt_mathtex_tl "><span>\(L_{10}\)</span></span> d'axe <span class="txt_mathtex_tl "><span>\((O,\vec z)\)</span></span>)</p></li></ul></li></ul></div><div class="rBk "><p>On peut modéliser chaque action mécanique par le torseur des actions mécaniques extérieures.</p><ul class="txt_il "><li class="txt_ili "><p>action mécanique du piston 2→ 1 :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{2\rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{A}\left \{ \begin{array}{c}\overrightarrow{A}_{2\rightarrow 1 } \\\vec 0 \end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{A}\left \{ \begin{matrix} -X_{21} &amp; 0 \\0 &amp; 0 \\0&amp; 0 \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)},X_{21}&gt;0\)</span></span></p></li><li class="txt_ili "><p>action mécanique de 3 → 1 :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{3 \rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{B}\left \{ \begin{array}{c}\overrightarrow{B}_{3 \rightarrow 1 } \\\vec 0 \end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{B}\left \{ \begin{matrix}0 &amp; 0 \\Y_{31} &amp; 0 \\0&amp; 0 \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)}, Y_{31}&gt;0\)</span></span></p></li></ul><ul class="txt_il "><li class="txt_ili "><p>action mécanique de 4 → 1 :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{4 \rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{E}\left \{ \begin{array}{c}\overrightarrow{E}_{4 \rightarrow 1 } \\\vec 0 \end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{E}\left \{ \begin{matrix}-X_{41}&amp; 0 \\0 &amp; 0 \\0&amp; 0 \\\end{matrix} \right \}_{\left( \vec u, \vec v, \vec z \right)}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{E}\left \{ \begin{matrix}-X_{41}\cos(\alpha) &amp; 0 \\-X_{41}\sin(\alpha) &amp; 0 \\0&amp;0 \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)},X_{41}&gt;0\)</span></span></p></li></ul><ul class="txt_il "><li class="txt_ili "><p>action mécanique du bâti → S en O :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{0 \rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{O}\left \{ \begin{array}{c}\overrightarrow{O}_{0 \rightarrow 1 } \\\overrightarrow{M}_{O, 0\rightarrow 1 }^O \end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{O}\left \{ \begin{matrix}X_{01} &amp; L_{01} \\Y_{01} &amp; M_{01} \\Z_{01} &amp; 0 \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)}\)</span></span></p></li></ul></div><div class="rBk "><ul class="txt_il "><li class="txt_ili "><p><strong class="txt_emp_is ">Torseur des actions mécaniques extérieures :</strong></p></li></ul></div><div class="rBk "><p>Pour calculer le torseur des actions mécaniques extérieures à la bride 1, les torseurs doivent être réduits en un même point, ici on choisit le point O :</p><ul class="txt_il "><li class="txt_ili "><p>action mécanique du piston 2 → 1 :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{2 \rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{O}\left \{ \begin{array}{c}\overrightarrow{A}_{2 \rightarrow 1 } \\\overrightarrow{M}_{O}\left( \overrightarrow{A}_{2 \rightarrow 1 }\right)\end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{O}\left \{ \begin{matrix} -X_{21}&amp; 0 \\0 &amp; 0 \\0&amp; X_{21}.d_A \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)},X_{21}&gt;0\)</span></span></p></li><li class="txt_ili "><p>action mécanique de 3 → 1 :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{3 \rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{O}\left \{ \begin{array}{c}\overrightarrow{B}_{3 \rightarrow 1 } \\\overrightarrow{M}_{O}\left( \overrightarrow{B}_{3 \rightarrow 1 }\right)\end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{O}\left \{ \begin{matrix}0 &amp; 0 \\Y_{31} &amp; 0 \\0&amp; -Y_{31}.d_B \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)},Y_{31}&gt;0\)</span></span></p></li></ul><ul class="txt_il "><li class="txt_ili "><p>action mécanique de 4 → 1 :</p><p><span class="txt_mathtex_tl "><span>\(\{ \mathcal T_{4 \rightarrow 1} \}={\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{O}\left \{ \begin{array}{c}\overrightarrow{E}_{4 \rightarrow 1 } \\\overrightarrow{M}_{O}\left( \overrightarrow{E}_{4 \rightarrow 1 }\right)\end{array} \right \}={\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{O}\left \{ \begin{matrix}-X_{41}\cos(\alpha) &amp; 0 \\-X_{41}\sin(\alpha) &amp;0 \\0&amp;-X_{41}.d_E \\\end{matrix} \right \}_{\left( \vec x, \vec y, \vec z \right)}, X_{41}&gt;0\)</span></span></p></li></ul></div><div class="rBk "><p>Ainsi le torseur des actions mécaniques extérieures à la bride 3 s'écrit :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[\{ \mathcal T_{\overline 1 \rightarrow 1} \}
+=
+{\vphantom{\left\{\begin{array}{ccc}\overrightarrow{R_{2\rightarrow 1}} \\\overrightarrow{M_{A} (2\rightarrow 1)}\end{array}\right\}}}_{O}\left \{ \begin{array}{c}\overrightarrow{R}_{\overline 1 \rightarrow 1 } \\\overrightarrow{M}_{O,\overline 1 \rightarrow 1}\end{array} \right \}
+=
+{\vphantom{\left \{ \begin{matrix}X_{21} &amp; L_{21} \\Y_{21} &amp; M_{21} \\Z_{21} &amp; N_{21} \\\end{matrix} \right \} }}_{O}
+\left \{ \begin{matrix} 
+-X_{21}-X_{41}\cos(\alpha)  +X_{01} &amp; L_{01}  \\
+Y_{31}-X_{41}\sin(\alpha)+Y_{01} &amp; M_{01} \\
+Z_{01} &amp; X_{21}.d_A -Y_{31}.d_B-X_{41}.d_E\\
+\end{matrix} \right \}
+_{\left( \vec x, \vec y, \vec z \right)}  
+
+
+\]</span></div></figure></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden" ></hr><nav class="pageTurner" role="navigation"><ul><li class="pagePrev"><a rel="prev" target="_self" href="module_Cours_C06_2.html" class="btnNav prev" title="Précédent (Isolement d&apos;un système matériel)"><span>Précédent</span></a></li><li class="pageNext"><a rel="next" target="_self" href="module_Cours_C06_4.html" class="btnNav next" title="Suivant (Notion d&apos;équilibre)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav aria-label="menu principal" class="pageSelector" id="menu" role="navigation" tabindex="-1"><hr class="hidden" ></hr><ul class="mnu static" data-totalPages="9"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="module_Cours_C06_1.html"><a href="module_Cours_C06_1.html" target="_self" class="item"><span>Objectifs</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_2.html"><a href="module_Cours_C06_2.html" target="_self" class="item"><span>Isolement d'un système matériel</span></a></div></li><li class="sel_yes anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_3.html"><span class="item"><span>Bilan des actions mécaniques extérieures</span></span></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_4.html"><a href="module_Cours_C06_4.html" target="_self" class="item"><span>Notion d'équilibre</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_5.html"><a href="module_Cours_C06_5.html" target="_self" class="item"><span>Principe fondamental de la Statique</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_6.html"><a href="module_Cours_C06_6.html" target="_self" class="item"><span>Théorème des actions réciproques (ou mutuelles)</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_7.html"><a href="module_Cours_C06_7.html" target="_self" class="item"><span>Cas particulier des problèmes plans</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_8.html"><a href="module_Cours_C06_8.html" target="_self" class="item"><span>Méthode de résolution</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_9.html"><a href="module_Cours_C06_9.html" target="_self" class="item"><span>Faisabilité d'un problème de Statique : Hyperstatisme et Isostatisme.</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden" ></hr><nav class="headingSelector" role="navigation"><ul class="mnu tools"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="module_Cours_C06.html" target="_self" class="item" type="index" title="Page d&apos;accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="parent"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" tabindex="-1"><hr class="hidden" ></hr><a id="linkSp" target="_blank" href="https://doc.scenari.software/Opale" title="Réalisé avec SCENARI (nouvelle fenêtre)"><span><img alt="Réalisé avec Scenari (nouvelle fenêtre)" src="../skin/img/tpl/scBtn.png" ></img></span></a></footer></div>
+		<script src="../skin/js/skin.js" ></script>
+		<script>/*<![CDATA[*/
+/* 5 */ outMgr.init();
+/* 5 */ scCodeMgr.init();
+/* 5 */ scImageMgr.init();
+/* 0 */ tplMgr.init({accessBar:"none",themeMode:"none",addMenuBtn:false});
+/*]]>*/</script>
+		<script>/*<![CDATA[*/mathjaxMgr.init();/*]]>*/</script></body></html>

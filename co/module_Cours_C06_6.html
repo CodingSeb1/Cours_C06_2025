@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Théorème des actions réciproques (ou mutuelles) [C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter]</title>
+		<meta charset="UTF-8" ></meta>
+		<meta name="generator" content="SCENARI 6.3.11 / OpaleExtEmeraude 24.1.0" ></meta>
+		<meta name="revision" content="2025-02-13 02:42" ></meta>
+		<link rel="start" href="module_Cours_C06.html" title="C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter" ></link>
+		<meta name="author" content="S. Lemasle
+" ></meta>
+		<meta name="keywords" content="" ></meta>
+		<meta name="date" content="2025" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css" ></link>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_tePlayer/tePlayer.css" ></link>
+		<script>/*<![CDATA[*/
+/*0*/ var scServices = {id:"m72qimpg"};
+/*1*/ window.scLoadParams = {destUri:"/co/module_Cours_C06_6.html", pathToRoot:"../"};
+/*]]>*/</script>
+		<script src="../lib-sc/scCoLib.js" ></script>
+		<script src="../lib-sc/scSiLib.js" ></script>
+		<script src="../lib-sc/scTiLib.js" ></script>
+		<script src="../lib-sc/scPaLib.js" ></script>
+		<script src="../lib-md/s_assmnt.js" ></script>
+		<script src="../lib-sc/scMapMgr.js" ></script>
+		<script src="../lib-sc/scDynUiMgr.js" ></script>
+		<script src="../lib-sc/scTooltipMgr.js" ></script>
+		<script src="../lib-sc/scDragMgr.js" ></script>
+		<script src="../lib-sc/scAssmntMgr.js" ></script>
+		<script src="../lib-md/w_teMgr/teLoader.js" ></script>
+		<script src="../lib-md/w_tplMgr/tplMgr.js" ></script>
+		<script src="../lib-md/s_scSearch/jsSearch.js" ></script>
+		<script src="../lib-md/w_mathjax/mathjaxMgr.js" ></script>
+		<script src="../lib-md/w_tePlayer/tePlayer.js" ></script>
+		<script src="../lib-md/w_scCodeMgr/scCodeMgr.js" ></script>
+		<script src="../lib-md/w_searchMgr/searchMgr.js" ></script>
+		<script src="../lib-md/w_scImageMgr/scImageMgr.js" ></script>
+		<script src="../lib-md/w_outMgr/outMgr.js" ></script>
+		<script>/*<![CDATA[*/
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImageMgr.registerAdaptedImage("ide:content/des:figure.resInFlow/des:img");
+
+scImageMgr.registerGallery("des:div.galFra");
+
+scImageMgr.registerSequence("des:div.seqFra");
+
+scImageMgr.registerSvg("des:svg");
+scImageMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImageMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+tePlayerMgr.init();
+/*]]>*/</script>
+		<link rel="shortcut icon" type="image/png" href="../skin/img/favicon.png" ></link>
+		<meta name="robots" content="index,follow" ></meta>
+		<style ></style>
+		<link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print" ></link>
+		<script>/*<![CDATA[*/
+outMgr.declareOutline("outline.txt");
+	/*]]>*/</script>
+</head>
+	<body class="default module expUc">
+		<div id="root"><header id="header"><h1><span>C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden" ></hr><section class="hBk article expUc"><h2 class="hBk_ti"><span>Théorème des actions réciproques (ou mutuelles)</span></h2><div class="hBk_co "><div class="basic pBk"><h3 class="pBk_ti"><span><i class="type"><span class="label">Fondamental</span></i><span class="hidden"> : </span><span class="title">Théorème des actions réciproques</span></span></h3><div class="pBk_co"><div class="rBk "><p>Quels que soient les solides <span class="txt_mathtex_tl "><span>\(S_1\)</span></span> et <span class="txt_mathtex_tl "><span>\(S_2\)</span></span> en équilibre, le torseur des actions mécaniques exercées par <span class="txt_mathtex_tl "><span>\(S_1\)</span></span> sur <span class="txt_mathtex_tl "><span>\(S_2\)</span></span> est l'opposé du torseur des actions mécaniques exercées par <span class="txt_mathtex_tl "><span>\(S_2\)</span></span> sur <span class="txt_mathtex_tl "><span>\(S_1\)</span></span> :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[\boxed{\quad 
+\forall t,  \quad 
+\forall S_1, S_2, \quad 
+ \left \{ \mathcal T_{S_2  \rightarrow S_1} \right \} 
+=  
+-\, \left \{ \mathcal T_{S_1  \rightarrow S_2}\right \}
+\quad 
+\text{ ou encore} \quad 
+\left\{
+\begin{array}{l}
+\overrightarrow R_{S_2 \rightarrow S_1}=- \,\overrightarrow R_{S_1 \rightarrow S_2} \\
+\overrightarrow M_{P, \, S_2 \rightarrow S_1}=- \,\overrightarrow M_{P, \,S_1 \rightarrow S_2} \quad , \forall P
+\end{array}
+\right.
+} \]</span></div></figure></div><div class="rBk res"><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Action_reciproq2.PNG" width="239" height="157" alt="" ></img></div></figure></div></div></div><div class="iBk info"><h3 class="iBk_ti"><span>Preuve :</span></h3><div class="iBk_co "><div class="rBk "><div class="txtRes "><div class="txt "><p>Soit <span class="txt_mathtex_tl "><span>\(S\)</span></span> un système matériel à l'équilibre dans <span class="txt_mathtex_tl "><span>\(R_g\)</span></span> supposé galiléen, composé de deux sous-systèmes <span class="txt_mathtex_tl "><span>\(S_1\)</span></span> et <span class="txt_mathtex_tl "><span>\(S_2\)</span></span> (également à l'équilibre).</p><p>L'équilibre des systèmes <span class="txt_mathtex_tl "><span>\(S\)</span></span>, <span class="txt_mathtex_tl "><span>\(S_1\)</span></span> et <span class="txt_mathtex_tl "><span>\(S_2\)</span></span> s'écrit :</p><p><span class="txt_mathtex_tl "><span>\(\left \{ \begin{array}{l} \left \{ \mathcal T_{\overline S \rightarrow S} \right \}=\{0\} \\ \left \{ \mathcal T_{\overline{S_1} \rightarrow S_1} \right \} =\{0\}\\ \left \{ \mathcal T_{\overline{S_2} \rightarrow S_2}\right \}=\{0\} \end{array} \right.\)</span></span></p></div><div class="img rgt "><figure role="group" class="resInFlow image" aria-label=""><div class="resInFlow_co "><img src="../res/Action_reciproq.PNG" width="120" height="103" alt="" ></img></div></figure></div></div></div><div class="rBk "><p>En additionnant les deux dernières équations d'équilibre, il vient : <span class="txt_mathtex_tl "><span>\(\left \{ \mathcal T_{\overline{S_1} \rightarrow S_1}\right \}+\left \{ \mathcal T_{\overline{S_2} \rightarrow S_2}\right \}=\{0\}\)</span></span></p><p>Or <span class="txt_mathtex_tl "><span>\(\left \{ \mathcal T_{\overline{S_1} \rightarrow S_1}\right \}=\left \{ \mathcal T_{\overline{S} \rightarrow S_1}\right \}+\left \{ \mathcal T_{S_2 \rightarrow S_1}\right \}\)</span></span> et <span class="txt_mathtex_tl "><span>\(\left \{ \mathcal T_{\overline{S_2} \rightarrow S_2}\right \}=\left \{ \mathcal T_{\overline{S} \rightarrow S_2}\right \}+\left \{ \mathcal T_{S_1 \rightarrow S_2}\right \}\)</span></span></p><p>Ainsi, <span class="txt_mathtex_tl "><span>\(\underbrace{\left \{ \mathcal T_{\overline{S} \rightarrow S_1}\right \}+\left \{ \mathcal T_{\overline{S} \rightarrow S_2}\right \}}_{=\left \{ \mathcal T_{\overline S \rightarrow S} \right \}=\{0\} \quad \text{ car S est en équilibre}}+\left \{ \mathcal T_{S_2 \rightarrow S_1}\right \}+\left \{ \mathcal T_{S_1 \rightarrow S_2}\right \}=\{0\}\)</span></span></p><p>D'où le résultat : <span class="txt_mathtex_tl "><span>\(\quad \left \{ \mathcal T_{S_2 \rightarrow S_1} \right \}=-\, \left \{ \mathcal T_{S_1 \rightarrow S_2}\right \}\)</span></span></p></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden" ></hr><nav class="pageTurner" role="navigation"><ul><li class="pagePrev"><a rel="prev" target="_self" href="module_Cours_C06_5.html" class="btnNav prev" title="Précédent (Principe fondamental de la Statique)"><span>Précédent</span></a></li><li class="pageNext"><a rel="next" target="_self" href="module_Cours_C06_7.html" class="btnNav next" title="Suivant (Cas particulier des problèmes plans)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav aria-label="menu principal" class="pageSelector" id="menu" role="navigation" tabindex="-1"><hr class="hidden" ></hr><ul class="mnu static" data-totalPages="9"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="module_Cours_C06_1.html"><a href="module_Cours_C06_1.html" target="_self" class="item"><span>Objectifs</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_2.html"><a href="module_Cours_C06_2.html" target="_self" class="item"><span>Isolement d'un système matériel</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_3.html"><a href="module_Cours_C06_3.html" target="_self" class="item"><span>Bilan des actions mécaniques extérieures</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_4.html"><a href="module_Cours_C06_4.html" target="_self" class="item"><span>Notion d'équilibre</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_5.html"><a href="module_Cours_C06_5.html" target="_self" class="item"><span>Principe fondamental de la Statique</span></a></div></li><li class="sel_yes anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_6.html"><span class="item"><span>Théorème des actions réciproques (ou mutuelles)</span></span></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_7.html"><a href="module_Cours_C06_7.html" target="_self" class="item"><span>Cas particulier des problèmes plans</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_8.html"><a href="module_Cours_C06_8.html" target="_self" class="item"><span>Méthode de résolution</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_9.html"><a href="module_Cours_C06_9.html" target="_self" class="item"><span>Faisabilité d'un problème de Statique : Hyperstatisme et Isostatisme.</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden" ></hr><nav class="headingSelector" role="navigation"><ul class="mnu tools"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="module_Cours_C06.html" target="_self" class="item" type="index" title="Page d&apos;accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="parent"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" tabindex="-1"><hr class="hidden" ></hr><a id="linkSp" target="_blank" href="https://doc.scenari.software/Opale" title="Réalisé avec SCENARI (nouvelle fenêtre)"><span><img alt="Réalisé avec Scenari (nouvelle fenêtre)" src="../skin/img/tpl/scBtn.png" ></img></span></a></footer></div>
+		<script src="../skin/js/skin.js" ></script>
+		<script>/*<![CDATA[*/
+/* 5 */ outMgr.init();
+/* 5 */ scCodeMgr.init();
+/* 5 */ scImageMgr.init();
+/* 0 */ tplMgr.init({accessBar:"none",themeMode:"none",addMenuBtn:false});
+/*]]>*/</script>
+		<script>/*<![CDATA[*/mathjaxMgr.init();/*]]>*/</script></body></html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Faisabilité d'un problème de Statique : Hyperstatisme et Isostatisme. [C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter]</title>
+		<meta charset="UTF-8" ></meta>
+		<meta name="generator" content="SCENARI 6.3.11 / OpaleExtEmeraude 24.1.0" ></meta>
+		<meta name="revision" content="2025-02-13 02:42" ></meta>
+		<link rel="start" href="module_Cours_C06.html" title="C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter" ></link>
+		<meta name="author" content="S. Lemasle
+" ></meta>
+		<meta name="keywords" content="" ></meta>
+		<meta name="date" content="2025" ></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css" ></link>
+		<link rel="stylesheet" type="text/css" href="../lib-md/w_tePlayer/tePlayer.css" ></link>
+		<script>/*<![CDATA[*/
+/*0*/ var scServices = {id:"m72qimpg"};
+/*1*/ window.scLoadParams = {destUri:"/co/module_Cours_C06_9.html", pathToRoot:"../"};
+/*]]>*/</script>
+		<script src="../lib-sc/scCoLib.js" ></script>
+		<script src="../lib-sc/scSiLib.js" ></script>
+		<script src="../lib-sc/scTiLib.js" ></script>
+		<script src="../lib-sc/scPaLib.js" ></script>
+		<script src="../lib-md/s_assmnt.js" ></script>
+		<script src="../lib-sc/scMapMgr.js" ></script>
+		<script src="../lib-sc/scDynUiMgr.js" ></script>
+		<script src="../lib-sc/scTooltipMgr.js" ></script>
+		<script src="../lib-sc/scDragMgr.js" ></script>
+		<script src="../lib-sc/scAssmntMgr.js" ></script>
+		<script src="../lib-md/w_teMgr/teLoader.js" ></script>
+		<script src="../lib-md/w_tplMgr/tplMgr.js" ></script>
+		<script src="../lib-md/s_scSearch/jsSearch.js" ></script>
+		<script src="../lib-md/w_mathjax/mathjaxMgr.js" ></script>
+		<script src="../lib-md/w_tePlayer/tePlayer.js" ></script>
+		<script src="../lib-md/w_scCodeMgr/scCodeMgr.js" ></script>
+		<script src="../lib-md/w_searchMgr/searchMgr.js" ></script>
+		<script src="../lib-md/w_scImageMgr/scImageMgr.js" ></script>
+		<script src="../lib-md/w_outMgr/outMgr.js" ></script>
+		<script>/*<![CDATA[*/
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImageMgr.registerAdaptedImage("ide:content/des:figure.resInFlow/des:img");
+
+scImageMgr.registerGallery("des:div.galFra");
+
+scImageMgr.registerSequence("des:div.seqFra");
+
+scImageMgr.registerSvg("des:svg");
+scImageMgr.registerZoom("des:a.svgZoom",{type:"svg",svgMax:1,toolbar:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+scImageMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+tePlayerMgr.init();
+/*]]>*/</script>
+		<link rel="shortcut icon" type="image/png" href="../skin/img/favicon.png" ></link>
+		<meta name="robots" content="index,follow" ></meta>
+		<style ></style>
+		<link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all" ></link>
+		<link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print" ></link>
+		<script>/*<![CDATA[*/
+outMgr.declareOutline("outline.txt");
+	/*]]>*/</script>
+</head>
+	<body class="default module last expUc">
+		<div id="root"><header id="header"><h1><span>C06 : Performances statiques des systèmes - Modéliser, résoudre et expérimenter</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden" ></hr><section class="hBk article expUc"><h2 class="hBk_ti"><span>Faisabilité d'un problème de Statique : Hyperstatisme et Isostatisme.</span></h2><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>Chaque isolement donne 2 équation vectorielles, soit au plus 6 équations scalaires indépendantes.</p><p>Un système matériel constitué d'un bâti et de <span class="txt_mathtex_tl "><span>\((n-1)\)</span></span> solides permet d'écrire <span class="txt_mathtex_tl "><span>\(6\,(n-1)\)</span></span> équations</p><p>Par conséquent, la faisabilité d'un problème de statique dépend du nombre d'inconnues statiques : il faut au plus <span class="txt_mathtex_tl "><span>\(6\,(n-1)\)</span></span> inconnues statiques.</p><p>Dans ce cas, le problème est dit <strong class="txt_emp_is ">isostatique</strong>. C'est-à-dire qu'on peut le résoudre en utilisant le Principe Fondamental de la Statique.</p><p>Si le nombre d'inconnues statiques est plus grand que le nombre d'équations scalaires indépendantes déduites du PFS, le système est dit <strong class="txt_emp_is ">hyperstatique</strong>.</p><p>On peut alors calculer le <strong class="txt_emp_is ">degré d'hyperstatisme</strong> d'un système grâce à la relation suivante :</p></div><div class="rBk res"><figure role="group" class="resInFlow latex"><div class="resInFlow_co "><span>\[\boxed{ \quad h=I_S-r_S \quad \text{ avec }  \quad r_S \leq 6 \, (n-1) \quad}\]</span></div></figure></div><div class="rBk "><p>Avec :</p><ul class="txt_il "><li class="txt_ili "><p><span class="txt_mathtex_tl "><span>\(I_S\)</span></span> : nombre d'inconnues statiques (ou de liaisons)</p></li></ul><ul class="txt_il "><li class="txt_ili "><p><span class="txt_mathtex_tl "><span>\(r_S\)</span></span> : nombre d'équations scalaires indépendantes issues de l'application du PFS</p></li></ul><ul class="txt_il "><li class="txt_ili "><p><span class="txt_mathtex_tl "><span>\(h\)</span></span> : degré d'hyperstatisme.</p></li></ul><ul class="txt_il "><li class="txt_ili "><p><span class="txt_mathtex_tl "><span>\(n\)</span></span> : nombre de solides composant le système (bâti compris)</p></li></ul></div></div></div><div class="remark pBk"><h3 class="pBk_ti"><span><i class="type"><span class="label">Remarque</span></i><span class="hidden"> : </span><span class="title">Calcul du degré d'hyperstatisme</span></span></h3><div class="pBk_co"><div class="rBk "><p>On se contente ici d'une inégalité pour <span class="txt_mathtex_tl "><span>\(r_S\)</span></span>. Le calcul exact de ce paramètre ou plus généralement du degré d'hyperstatisme <span class="txt_mathtex_tl "><span>\(h\)</span></span> sera détaillé en <span class="txt_mathtex_tl "><span>\(2^{\text{ème}}\)</span></span> année dans le cadre de la théorie des mécanismes.</p></div></div></div></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden" ></hr><nav class="pageTurner" role="navigation"><ul><li class="pagePrev"><a rel="prev" target="_self" href="module_Cours_C06_8.html" class="btnNav prev" title="Précédent (Méthode de résolution)"><span>Précédent</span></a></li><li class="pageNext"><span class="btnNav next"><span>Fin</span></span></li></ul></nav></div></div><div id="toolbox"><nav aria-label="menu principal" class="pageSelector" id="menu" role="navigation" tabindex="-1"><hr class="hidden" ></hr><ul class="mnu static" data-totalPages="9"><li class="sel_no anc_no type_l  dpt_0 obj"><div class="lbl type_l" id="module_Cours_C06_1.html"><a href="module_Cours_C06_1.html" target="_self" class="item"><span>Objectifs</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_2.html"><a href="module_Cours_C06_2.html" target="_self" class="item"><span>Isolement d'un système matériel</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_3.html"><a href="module_Cours_C06_3.html" target="_self" class="item"><span>Bilan des actions mécaniques extérieures</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_4.html"><a href="module_Cours_C06_4.html" target="_self" class="item"><span>Notion d'équilibre</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_5.html"><a href="module_Cours_C06_5.html" target="_self" class="item"><span>Principe fondamental de la Statique</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_6.html"><a href="module_Cours_C06_6.html" target="_self" class="item"><span>Théorème des actions réciproques (ou mutuelles)</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_7.html"><a href="module_Cours_C06_7.html" target="_self" class="item"><span>Cas particulier des problèmes plans</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_8.html"><a href="module_Cours_C06_8.html" target="_self" class="item"><span>Méthode de résolution</span></a></div></li><li class="sel_yes anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="module_Cours_C06_9.html"><span class="item"><span>Faisabilité d'un problème de Statique : Hyperstatisme et Isostatisme.</span></span></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden" ></hr><nav class="headingSelector" role="navigation"><ul class="mnu tools"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="module_Cours_C06.html" target="_self" class="item" type="index" title="Page d&apos;accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="parent"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" tabindex="-1"><hr class="hidden" ></hr><a id="linkSp" target="_blank" href="https://doc.scenari.software/Opale" title="Réalisé avec SCENARI (nouvelle fenêtre)"><span><img alt="Réalisé avec Scenari (nouvelle fenêtre)" src="../skin/img/tpl/scBtn.png" ></img></span></a></footer></div>
+		<script src="../skin/js/skin.js" ></script>
+		<script>/*<![CDATA[*/
+/* 5 */ outMgr.init();
+/* 5 */ scCodeMgr.init();
+/* 5 */ scImageMgr.init();
+/* 0 */ tplMgr.init({accessBar:"none",themeMode:"none",addMenuBtn:false});
+/*]]>*/</script>
+		<script>/*<![CDATA[*/mathjaxMgr.init();/*]]>*/</script></body></html>
